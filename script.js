@@ -31,8 +31,11 @@ new Vue({
                 time: this.time
             }
             
-            this.courses.push(course)
-            
-        }
+            this.courses.push(course)  
+        },
+        resetInput() {
+            this.title = "";
+            this.time = 0;
+          },
     }
   })
