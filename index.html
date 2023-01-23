@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graduation</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://e.snmc.io/i/600/s/bfbead3fee8cc3e8583d3c116d324c4c/7486511/kanye-west-graduation-Cover-Art.jpg"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <img :src="img" :alt="alt" height="100vh" />
+      <h1>Mis Cursos de Platzi💚</h1>
+      <p>
+        <input type="text" placeholder="Titulo del curso" v-model="title" />
+      </p>
+      <p>
+        <input type="number" placeholder="Horas" v-model="time" />
+      </p>
+      <p>
+        <button v-on:click="addCourse">Guardar Curso</button>
+      </p>
+
+      <div>
+        <h3>Lista de Cursos</h3>
+        <p class="black" v-if="courses.length == 0">
+          Aun no has realizado cursos
+        </p>
+        <div>
+          <ol class="black" v-if="courses.length > 0">
+            <!-- Lista de cursos -->
+            <li v-for="(p, i) in courses" v-bind:key="i">
+              {{p.title}} con {{p.time}} horas
+            </li>
+          </ol>
+          <hr />
+
+          <p v-if="countTotalTime == 0">
+            No llevas cursos en Platzi, empieza hoy mismo! 🙌
+            <br />
+            <b>#NuncaParesDeAprender 💚</b>
+          </p>
+          <p v-else>
+            Llevo <strong>{{ countTotalTime }}</strong> horas aprendiendo en
+            Platzi.
+            <br />
+            <b>#NuncaParesDeAprender 💚</b>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

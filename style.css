@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "Ye";
+  src: url("ye.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+h1 {
+  color: #08f42a;
+  font-size: 200%;
+  font-family: "Ye";
+}
+html {
+  padding: 20px;
+  color: #3d3d3d;
+  background-color: #7a8ca4;
+  text-align: center;
+}
+input {
+  width: 35%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-family: "Ye";
+  font-size: larger;
+  border-radius: 10px;
+}
+input:focus {
+  background-color: #f2eee5;
+}
+button {
+  background-color: #172940;
+  border-color: #11da2d;
+  color: #11da2d;
+  padding: 16px 32px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 15px;
+  font-family: "Ye";
+  font-size: larger;
+}
+hr {
+  color: #f2eee5;
+}
+ol {
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+}
+.black {
+  color: #172940;
+}
